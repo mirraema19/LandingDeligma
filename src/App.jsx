@@ -6,6 +6,7 @@ import ContactModal from './components/ContactModal';
 import AnimatedBackground from './components/AnimatedBackground';
 import HomePage from './pages/HomePage';
 import IgnacioMariscalPage from './pages/IgnacioMariscalPage';
+import RevistaDeligmaPage from './pages/RevistaDeligmaPage';
 import './styles/App.css';
 
 function AppContent() {
@@ -15,8 +16,8 @@ function AppContent() {
   const openContactModal = () => setIsModalOpen(true);
   const closeContactModal = () => setIsModalOpen(false);
 
-  // No mostrar Header y Footer en la página de Ignacio Mariscal
-  const showHeaderFooter = location.pathname !== '/ignacio-mariscal';
+  // No mostrar Header y Footer en las páginas de Ignacio Mariscal y Revista Deligma
+  const showHeaderFooter = location.pathname !== '/ignacio-mariscal' && location.pathname !== '/revista-deligma';
 
   return (
     <div className="App relative">
@@ -29,6 +30,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/ignacio-mariscal" element={<IgnacioMariscalPage />} />
+          <Route path="/revista-deligma" element={<RevistaDeligmaPage />} />
         </Routes>
       </main>
 

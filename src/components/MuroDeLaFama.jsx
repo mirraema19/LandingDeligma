@@ -25,7 +25,7 @@ const fameData = [
   },
   {
     img: Miembro3,
-    name: 'Marisol Mijangos Cervantes',
+    name: 'Arafni Maori Zea Reyes',
     achievements: [
       'Meximun 2024 - Mención honorífica',
       'Umarmun 2024 - Mención honorífica',
@@ -50,11 +50,9 @@ const MuroDeLaFama = () => {
                 <strong>Reconocimiento a la Excelencia:</strong> El Muro de la Fama es nuestro espacio especial para honrar a los miembros excepcionales de la comunidad Deligma que han demostrado compromiso, liderazgo, excelencia académica y dedicación extraordinaria a nuestra misión.
             </p>
         </motion.div>
-        {/*
-          - 1 columna en móvil (por defecto)
-          - 2 columnas en tablets (md)
-          - 3 columnas en desktops (lg)
-        */}
+        {
+
+        }
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {fameData.map((miembro, index) => (
             <motion.div
