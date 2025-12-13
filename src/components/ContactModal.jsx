@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: <FiMail size={20} />,
     label: 'Correo Electrónico',
-    value: 'contacto.deligma@umar.mx',
-    href: 'mailto:contacto.deligma@umar.mx'
+    value: 'delegacion.imariscal@aulavirtual.umar.mx',
+    href: 'mailto:delegacion.imariscal@aulavirtual.umar.mx'
   },
   {
     icon: <FiPhone size={20} />,
@@ -34,11 +34,6 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { 
-    icon: <FiLinkedin size={24} />, 
-    href: 'https://linkedin.com',
-    colorClass: 'text-gray-500 hover:text-accent' 
-  },
   { 
     icon: <FiFacebook size={24} />, 
     href: 'https://www.facebook.com/profile.php?id=100089851896791',

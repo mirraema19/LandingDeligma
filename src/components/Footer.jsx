@@ -6,11 +6,8 @@ const Footer = () => {
       <div className="container mx-auto px-6 text-center">
         <p>&copy; 2025 Deligma. Todos los derechos reservados.</p>
         <p>Desarrollado con pasión para la excelencia.</p>
-        <div className="flex justify-center space-x-6 mt-4">
-          {/* Aquí puedes agregar íconos de redes sociales */}
-          <a href="#" className="hover:text-light-blue">Facebook</a>
-          <a href="#" className="hover:text-light-blue">Twitter</a>
-          <a href="#" className="hover:text-light-blue">LinkedIn</a>
+        <div className="flex justify-center mt-4">
+          <a href="mailto:delegacion.imariscal@aulavirtual.umar.mx" className="hover:text-light-blue">delegacion.imariscal@aulavirtual.umar.mx</a>
         </div>
       </div>
     </footer>

@@ -5,9 +5,34 @@ import Miembro2 from '../assets/images/Persona2.jpg';
 import Miembro3 from '../assets/images/Persona3.jpg';
 
 const fameData = [
-  { img: Miembro1, name: 'Miembro Destacado 1', role: 'Excelencia Académica' },
-  { img: Miembro2, name: 'Miembro Destacado 2', role: 'Liderazgo y Compromiso' },
-  { img: Miembro3, name: 'Miembro Destacado 3', role: 'Innovación' },
+  {
+    img: Miembro1,
+    name: 'Marisol Mijangos Cervantes',
+    achievements: [
+      'Sinium BUAP- Mención honorífica'
+    ]
+  },
+  {
+    img: Miembro2,
+    name: 'Edgar Baruc Ramírez Cruz',
+    achievements: [
+      'Meximun 2024 - Mención delegación',
+      'UMARMUN 2023 - Mejor delegación',
+      'UMARMUN 2024 - Mención honorífica',
+      'Sinium BUAP 2024 - Mejor delegación',
+      'DUMUN 2025 - Mención honorífica'
+    ]
+  },
+  {
+    img: Miembro3,
+    name: 'Marisol Mijangos Cervantes',
+    achievements: [
+      'Meximun 2024 - Mención honorífica',
+      'Umarmun 2024 - Mención honorífica',
+      'Sinium BUAP 2024 - Mejor delegación',
+      'DUMUN 2025 - Mención honorífica'
+    ]
+  },
 ];
 
 const MuroDeLaFama = () => {
@@ -44,7 +69,11 @@ const MuroDeLaFama = () => {
               <img src={miembro.img} alt={miembro.name} className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500" />
               <div className="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-75 transition-all duration-500 flex flex-col justify-end p-6 text-left">
                 <h3 className="text-white text-2xl font-bold opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">{miembro.name}</h3>
-                <p className="text-light-blue opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">{miembro.role}</p>
+                <div className="text-light-blue opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-100">
+                  {miembro.achievements.map((achievement, i) => (
+                    <p key={i} className="mb-1">{achievement}</p>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
