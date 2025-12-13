@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Nosotros = () => {
   return (
-    <section id="nosotros" className="py-20 bg-white">
+    <section id="nosotros" className="py-20">
       <div className="container mx-auto px-6">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}

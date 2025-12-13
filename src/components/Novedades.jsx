@@ -21,7 +21,7 @@ const cardData = [
 
 const Novedades = () => {
   return (
-    <section id="eventos" className="py-20 bg-white">
+    <section id="eventos" className="py-20">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: -30 }}

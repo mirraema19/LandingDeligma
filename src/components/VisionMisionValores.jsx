@@ -13,7 +13,7 @@ const valores = [
 
 const VisionMisionValores = () => {
   return (
-    <section id="vision" className="py-20 bg-white">
+    <section id="vision" className="py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
              <motion.h2
@@ -53,18 +53,18 @@ const VisionMisionValores = () => {
         
         <div>
             <h3 className="text-3xl font-bold text-primary mb-8 text-center">Valores</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {valores.map((valor, index) => (
-                    <motion.div 
+                    <motion.div
                         key={index}
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="p-4"
+                        className="bg-light-gray p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 text-center"
                     >
-                        <h4 className="font-bold text-accent text-xl mb-1">{valor.name}</h4>
-                        <p className="text-gray-600 text-sm">{valor.desc}</p>
+                        <h4 className="font-bold text-accent text-xl mb-3">{valor.name}</h4>
+                        <p className="text-gray-700 text-sm leading-relaxed">{valor.desc}</p>
                     </motion.div>
                 ))}
             </div>
