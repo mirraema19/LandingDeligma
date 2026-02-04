@@ -75,8 +75,8 @@ const MuroFamaModal = ({ miembro, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-y-auto">
-      <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl my-8">
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+      <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         <div className="flex justify-between items-center p-6 border-b">
           <h2 className="text-2xl font-bold text-primary">{miembro ? 'Editar Miembro' : 'Nuevo Miembro'}</h2>
           <button onClick={() => onClose(false)} className="text-gray-400 hover:text-gray-600"><FaTimes className="text-2xl" /></button>
