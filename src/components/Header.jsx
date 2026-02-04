@@ -1,14 +1,35 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Header = ({ onContactClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [clickCount, setClickCount] = useState(0);
+  const [isFlashing, setIsFlashing] = useState(false);
+  const navigate = useNavigate();
   const navLinks = ['Nosotros', 'Revista', 'Eventos', 'Convocatorias'];
 
   const handleContactClick = (e) => {
     e.preventDefault();
     setIsMenuOpen(false);
     onContactClick();
+  };
+
+  const handleLogoClick = () => {
+    setClickCount(prev => prev + 1);
+
+    setTimeout(() => {
+      setClickCount(0);
+    }, 800);
+
+    if (clickCount === 2) {
+      setIsFlashing(true);
+      setTimeout(() => {
+        setIsFlashing(false);
+        navigate('/admin/login');
+      }, 300);
+      setClickCount(0);
+    }
   };
 
   return (
@@ -20,10 +41,15 @@ const Header = ({ onContactClick }) => {
         className="fixed top-0 left-0 w-full z-40 bg-white shadow-md text-primary"
       >
         <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-          <a href="#" className="flex items-center space-x-2">
+          <div
+            onClick={handleLogoClick}
+            className={`flex items-center space-x-2 cursor-pointer select-none transition-all duration-300 ${
+              isFlashing ? 'opacity-0 scale-95' : 'opacity-100 scale-100'
+            }`}
+          >
             <span className="text-xl font-bold">UMAR</span>
             <span className="hidden sm:block text-xl font-light">| Deligma</span>
-          </a>
+          </div>
           
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((item) => (

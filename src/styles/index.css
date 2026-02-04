@@ -2,7 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Añadimos esto para el scroll suave */
+/* Scroll suave */
 html {
   scroll-behavior: smooth;
+}
+
+/* Prevenir overflow horizontal en toda la aplicación */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegurar que contenedores principales no causen overflow */
+#root {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
